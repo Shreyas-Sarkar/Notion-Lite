@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Timer from '../components/Timer';
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+const pb = new PocketBase(import.meta.env.VITE_PB_URL);
 
 const Dashboard = () => {
   const [activeSection, setActiveSection] = useState('dashboard');

@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './Auth.css';
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+const pb = new PocketBase(import.meta.env.VITE_PB_URL);
 
 const Auth = () => {
   const navigate = useNavigate();
