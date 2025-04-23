@@ -1,0 +1,139 @@
+:root {
+  --sidebar-width: 250px;
+  --primary-color: #646cff;
+  --border-color: #e0e0e0;
+  --bg-hover: #f5f5f5;
+  --tag-work: #4CAF50;
+  --tag-personal: #2196F3;
+  --tag-others: #9C27B0;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr 300px;
+  height: 100vh;
+  background: white;
+  color: #333;
+}
+
+.dashboard.no-right-panel {
+  grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border-color);
+  padding: 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-item.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.nav-item:hover {
+  background: var(--bg-hover);
+}
+
+.tags-section {
+  margin-top: 30px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 16px;
+  margin: 4px;
+  font-size: 0.9em;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.tag:hover {
+  opacity: 0.9;
+}
+
+.tag.work {
+  background: var(--tag-work);
+}
+
+.tag.personal {
+  background: var(--tag-personal);
+}
+
+.tag.others {
+  background: var(--tag-others);
+}
+
+.main-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.note-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.note-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.right-panel {
+  border-left: 1px solid var(--border-color);
+  padding: 20px;
+}
+
+.stats-card {
+  background: var(--bg-hover);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.stats-number {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.task-list {
+  margin-top: 24px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mini-calendar {
+  margin-top: 24px;
+  padding: 16px;
+  background: var(--bg-hover);
+  border-radius: 8px;
+}
