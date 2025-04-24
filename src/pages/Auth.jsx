@@ -80,6 +80,7 @@ const Auth = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
+                placeholder="Enter name"
                 required
               />
             </div>
@@ -92,6 +93,7 @@ const Auth = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
+                placeholder="xyz@gmail.com"
                 required
               />
             </div>
@@ -104,6 +106,7 @@ const Auth = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
+                placeholder="Minimum 8 characters required"
                 required
               />
             </div>
@@ -133,6 +136,9 @@ const Auth = () => {
             ) : (
               <p>Already have an account? <button onClick={() => setIsLogin(true)}>Login</button></p>
             )}
+          </div>
+          <div className="server-note">
+            <p>Note: The server may take up to a minute to start after being idle. Please wait after clicking the {isLogin ? 'Login' : 'Register'} button.</p>
           </div>
         </div>
       </div>
