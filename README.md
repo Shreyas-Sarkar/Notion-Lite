@@ -1,12 +1,74 @@
-# React + Vite
+# Lite Notion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, feature-rich productivity application inspired by Notion, built with modern web technologies. This application helps you organize your work, studies, and personal life with an intuitive interface and essential productivity tools.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📝 Notes
+- Create and manage notes with titles and content
+- Organize notes with tags (Work, Personal, Others)
+- Real-time updates and persistence
+- Clean and intuitive note-taking interface
 
-## Expanding the ESLint configuration
+### ✓ Task Management
+- Create and track todos
+- Mark tasks as complete
+- Organize your daily tasks efficiently
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📅 Calendar Events
+- Schedule and manage events
+- View upcoming events
+- Date and time-based event organization
+
+### ⏲️ Study Timer
+- Built-in timer for focused work sessions
+- Track your productivity periods
+
+### 📊 Dashboard Overview
+- Comprehensive dashboard with key metrics
+- View total notes, tasks, and completion status
+- Quick access to all features
+- Today's overview with important statistics
+
+## Tech Stack
+
+### Frontend
+- **React** - UI library for building interactive user interfaces
+- **Vite** - Next-generation frontend tooling for faster development
+- **CSS3** - Custom styling with modern CSS features
+
+### Backend
+- **PocketBase** - Open source backend for managing data and authentication
+
+### Key Features
+- Responsive design for all devices
+- Real-time data synchronization
+- User authentication and data persistence
+- Clean and modern user interface
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Set up environment variables:
+Create a `.env` file in the root directory and add:
+```env
+VITE_PB_URL=your_pocketbase_url
+```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
