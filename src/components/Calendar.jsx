@@ -6,7 +6,6 @@ const Calendar = ({ events, setEvents }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch events from PocketBase
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -38,12 +37,10 @@ const Calendar = ({ events, setEvents }) => {
     const { daysInMonth, firstDayOfMonth } = getDaysInMonth(currentDate);
     const days = [];
 
-    // Add empty cells for days before the first day of the month
     for (let i = 0; i < firstDayOfMonth; i++) {
       days.push(<div key={`empty-${i}`} className="calendar-day empty"></div>);
     }
 
-    // Add days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
       const hasEvents = events.some(event => new Date(event.event_time).toDateString() === date.toDateString());
@@ -72,7 +69,6 @@ const Calendar = ({ events, setEvents }) => {
       try {
         const createdEvent = await calendarService.createEvent(newEvent);
         console.log('Event created:', createdEvent);
-        // Fetch updated events list after creating new event
         const updatedEvents = await calendarService.getEvents();
         setEvents(updatedEvents);
         setNewEvent({ title: '', date: '', time: '' });
