@@ -46,17 +46,14 @@ const Auth = () => {
           passwordConfirm: formData.passwordConfirm
         });
         
-        // Send email verification request
         await pb.collection('users').requestVerification(formData.email);
         
-        // Auto-login after successful registration
         await pb.collection('users').authWithPassword(
           formData.email,
           formData.password
         );
       }
 
-      // If authentication successful, redirect to dashboard
       navigate('/dashboard');
     } catch (err) {
       setError(err.message);
