@@ -6,7 +6,7 @@ const Timer = () => {
   const [breakDuration, setBreakDuration] = useState(5);
   const [time, setTime] = useState(studyDuration * 60);
   const [isRunning, setIsRunning] = useState(false);
-  const [sessionType, setSessionType] = useState('study'); // 'study' or 'break'
+  const [sessionType, setSessionType] = useState('study'); 
 
   useEffect(() => {
     let interval;
@@ -15,7 +15,7 @@ const Timer = () => {
         setTime(prevTime => prevTime - 1);
       }, 1000);
     } else if (time === 0) {
-      // Switch session type and reset timer when time is up
+
       if (sessionType === 'study') {
         setTime(breakDuration * 60);
         setSessionType('break');
