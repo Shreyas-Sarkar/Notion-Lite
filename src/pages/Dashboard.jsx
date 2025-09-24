@@ -18,7 +18,6 @@ const Dashboard = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    // Update notes count when component mounts
     const fetchNotes = async () => {
       try {
         if (pb.authStore.isValid) {
@@ -56,7 +55,6 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <Header username={pb.authStore.model?.name || 'User'} />
       <div className={`dashboard ${activeSection !== 'dashboard' ? 'no-right-panel' : ''}`}>
-      {/* Left Sidebar */}
       <div className="sidebar">
         <div className={`nav-item ${activeSection === 'dashboard' ? 'active' : ''}`} onClick={() => setActiveSection('dashboard')}>📊 Dashboard</div>
         <div className={`nav-item ${activeSection === 'notes' ? 'active' : ''}`} onClick={() => setActiveSection('notes')}>📝 Notes</div>
@@ -66,12 +64,10 @@ const Dashboard = () => {
         <Timer />
       </div>
 
-      {/* Main Content */}
       <div className="main-content">
         {renderMainContent()}
       </div>
 
-      {/* Right Panel - Only shown in dashboard view */}
       {activeSection === 'dashboard' && (
         <div className="right-panel">
           <h2>Today's Overview</h2>
