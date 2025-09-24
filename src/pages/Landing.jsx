@@ -7,7 +7,6 @@ const Landing = () => {
     <div className="landing-container">
       <Header />
       
-      {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
           <h1>Your Connected Workspace for Everything</h1>
@@ -16,7 +15,6 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="features-section">
         <h2>All-in-one workspace</h2>
         <div className="feature-grid">
@@ -38,7 +36,6 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
       <section className="how-it-works">
         <h2>How NotionLite Works</h2>
         <div className="steps-container">
@@ -60,7 +57,6 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="cta-section">
         <h2>Ready to get started?</h2>
         <p>Join thousands of users who trust NotionLite for their productivity needs</p>
